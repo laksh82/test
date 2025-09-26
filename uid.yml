@@ -1,0 +1,10 @@
+- name: Check container UID
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Print UID
+      command: id
+      register: result
+
+    - debug:
+        var: result.stdout

@@ -5,7 +5,7 @@
     - name: Copy the hostname file to /var/tmp/ on the Ansible Automation Platform server
       fetch:
         src: "/tmp/hostname.txt"
-        dest: "/opt/new-folder"
+        dest: "/opt/new-folder/"
         owner: awx
         group: awx
         mode: '0775'

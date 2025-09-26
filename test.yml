@@ -1,0 +1,12 @@
+- name: copy file to the Ansible Automation Platform
+  hosts: all  
+  become: yes
+  tasks:
+    - name: Copy the hostname file to /var/tmp/ on the Ansible Automation Platform server
+      fetch:
+        src: "/tmp/hostname.txt"
+        dest: "/var/tmp/hostname.txt"
+        owner: awx
+        group: awx
+        mode: '0775'
+        flat: yes
